@@ -1,103 +1,96 @@
 {
   "name": "bootstrap.native",
-  "version": "4.1.2",
-  "description": "Native JavaScript for Bootstrap, the sweetest JavaScript library without jQuery.",
-  "main": "dist/bootstrap-native.min.js",
-  "types": "src/index.d.ts",
-  "module": "dist/bootstrap-native.esm.js",
-  "jsnext": "src/index.js",
+  "version": "5.1.10",
+  "author": "thednp",
+  "license": "MIT",
+  "description": "Bootstrap components build with Typescript",
+  "homepage": "https://thednp.github.io/bootstrap.native/",
+  "type": "module",
+  "sideEffects": false,
+  "source": "./src/index.ts",
+  "types": "./dist/module/index.d.cts",
+  "exports": {
+    ".": "./dist/module/index.js",
+    "./alert": "./dist/alert.mjs",
+    "./button": "./dist/button.mjs",
+    "./carousel": "./dist/carousel.mjs",
+    "./collapse": "./dist/collapse.mjs",
+    "./dropdown": "./dist/dropdown.mjs",
+    "./modal": "./dist/modal.mjs",
+    "./offcanvas": "./dist/offcanvas.mjs",
+    "./popover": "./dist/popover.mjs",
+    "./scrollspy": "./dist/scrollspy.mjs",
+    "./tab": "./dist/tab.mjs",
+    "./toast": "./dist/toast.mjs",
+    "./tooltip": "./dist/tooltip.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "pre-test": "pnpm clean-coverage",
+    "dev": "vite --open ./docs/index-dev.html --port 8577",
+    "serve": "vite --open ./docs/index.html --port 8577",
+    "test": "pnpm pre-test && vitest --browser.headless",
+    "test-ui": "pnpm pre-test && vitest --browser --ui",
+    "clean-coverage": "rm -rf coverage .nyc_output",
+    "badges": "npx -p dependency-version-badge update-badge typescript vitest vite",
+    "build": "tsdown && pnpm copy-docs",
+    "build-vite": "vite build",
+    "build-components": "vite build --config vite.config.components.ts",
+    "copy-docs": "cp dist/bootstrap-native.min.js docs/assets/js/bootstrap-native.min.js && cp dist/bootstrap-native.min.js.map docs/assets/js/bootstrap-native.min.js.map",
+    "lint": "deno lint src",
+    "fix:ts": "deno lint src --fix",
+    "check:ts": "tsc --noEmit",
+    "prepublishOnly": "pnpm update --latest && pnpm lint && deno fmt src && pnpm build && pnpm copy-docs"
+  },
+  "bugs": {
+    "url": "https://github.com/thednp/bootstrap.native/issues"
+  },
   "files": [
     "dist",
-    "types",
-    "src"
+    "README.md",
+    "package.json",
+    "LICENSE"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "help": "rollup --help",
-    "build": "npm run lint:js && npm-run-all --parallel build-* && npm-run-all --parallel module-* && npm-run-all --parallel copy-*",
-    "custom": "rollup -c --environment",
-    "fix:js": "eslint src/ --config .eslintrc --fix",
-    "lint:js": "eslint src/ --config .eslintrc",
-    "build-v4-esm": "rollup --environment INPUTFILE:./src/index-v4.js,OUTPUTFILE:./dist/bootstrap-native-v4-esm.js,FORMAT:esm,MIN:false -c",
-    "build-v4-esm-min": "rollup --environment INPUTFILE:./src/index-v4.js,OUTPUTFILE:./dist/bootstrap-native-v4-esm.min.js,FORMAT:esm,MIN:true -c",
-    "build-v4-umd": "rollup --environment INPUTFILE:./src/index-v4.js,OUTPUTFILE:./dist/bootstrap-native-v4.js,FORMAT:umd,MIN:false -c",
-    "build-v4-umd-min": "rollup --environment INPUTFILE:./src/index-v4.js,OUTPUTFILE:./dist/bootstrap-native-v4.min.js,FORMAT:umd,MIN:true -c",
-    "build-esm": "rollup --environment FORMAT:esm,MIN:false -c",
-    "build-esm-min": "rollup --environment FORMAT:esm,MIN:true -c",
-    "build-umd": "rollup --environment FORMAT:umd,MIN:false -c",
-    "build-umd-min": "rollup --environment FORMAT:umd,MIN:true -c",
-    "copy-v4-umd": "rollup --environment INPUTFILE:./src/index-v4.js,OUTPUTFILE:./docs/assets/js/bootstrap-native-v4.js,FORMAT:umd,MIN:false -c",
-    "copy-umd": "rollup --environment FORMAT:umd,MIN:false,OUTPUTFILE:./docs/assets/js/bootstrap-native.js -c",
-    "build:ts": "tsc -d",
-    "modules": "npm-run-all --parallel module-*",
-    "module-alert-esm": "rollup --environment MODULE:alert,FORMAT:esm,MIN:false -c rollup.module.js",
-    "module-button-esm": "rollup --environment MODULE:button,FORMAT:esm,MIN:false -c rollup.module.js",
-    "module-carousel-esm": "rollup --environment MODULE:carousel,FORMAT:esm,MIN:false -c rollup.module.js",
-    "module-collapse-esm": "rollup --environment MODULE:collapse,FORMAT:esm,MIN:false -c rollup.module.js",
-    "module-dropdown-esm": "rollup --environment MODULE:dropdown,FORMAT:esm,MIN:false -c rollup.module.js",
-    "module-modal-esm": "rollup --environment MODULE:modal,FORMAT:esm,MIN:false -c rollup.module.js",
-    "module-offcanvas-esm": "rollup --environment MODULE:offcanvas,FORMAT:esm,MIN:false -c rollup.module.js",
-    "module-popover-esm": "rollup --environment MODULE:popover,FORMAT:esm,MIN:false -c rollup.module.js",
-    "module-scrollspy-esm": "rollup --environment MODULE:scrollspy,FORMAT:esm,MIN:false -c rollup.module.js",
-    "module-tab-esm": "rollup --environment MODULE:tab,FORMAT:esm,MIN:false -c rollup.module.js",
-    "module-toast-esm": "rollup --environment MODULE:toast,FORMAT:esm,MIN:false -c rollup.module.js",
-    "module-tooltip-esm": "rollup --environment MODULE:tooltip,FORMAT:esm,MIN:false -c rollup.module.js",
-    "module-alert-umd": "rollup --environment MODULE:alert,FORMAT:umd,MIN:false -c rollup.module.js",
-    "module-button-umd": "rollup --environment MODULE:button,FORMAT:umd,MIN:false -c rollup.module.js",
-    "module-carousel-umd": "rollup --environment MODULE:carousel,FORMAT:umd,MIN:false -c rollup.module.js",
-    "module-collapse-umd": "rollup --environment MODULE:collapse,FORMAT:umd,MIN:false -c rollup.module.js",
-    "module-dropdown-umd": "rollup --environment MODULE:dropdown,FORMAT:umd,MIN:false -c rollup.module.js",
-    "module-modal-umd": "rollup --environment MODULE:modal,FORMAT:umd,MIN:false -c rollup.module.js",
-    "module-offcanvas-umd": "rollup --environment MODULE:offcanvas,FORMAT:umd,MIN:false -c rollup.module.js",
-    "module-popover-umd": "rollup --environment MODULE:popover,FORMAT:umd,MIN:false -c rollup.module.js",
-    "module-scrollspy-umd": "rollup --environment MODULE:scrollspy,FORMAT:umd,MIN:false -c rollup.module.js",
-    "module-tab-umd": "rollup --environment MODULE:tab,FORMAT:umd,MIN:false -c rollup.module.js",
-    "module-toast-umd": "rollup --environment MODULE:toast,FORMAT:umd,MIN:false -c rollup.module.js",
-    "module-tooltip-umd": "rollup --environment MODULE:tooltip,FORMAT:umd,MIN:false -c rollup.module.js",
-    "polyfill": "npm-run-all --parallel polyfill-*",
-    "polyfill-unminified": "rollup --environment MIN:false -c rollup.polyfill.js",
-    "polyfill-minified": "rollup --environment MIN:true -c rollup.polyfill.js",
-    "polyfill-demo": "rollup --environment MIN:false,OUTPUTFILE:./docs/assets/js/polyfill.js -c rollup.polyfill.js",
-    "watch": "rollup --environment FORMAT:umd,MIN:false -c -w"
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
-  "browserslist": [
-    "last 2 versions",
-    "not <= 1%",
-    "not IE 10"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thednp/bootstrap.native.git"
   },
   "keywords": [
-    "bootstrap.native",
+    "twitter-bootstrap",
     "bootstrap",
-    "vanilla js",
-    "native javascript",
-    "vanilla javascript"
+    "native",
+    "typescript"
   ],
-  "author": "dnp_theme",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/thednp/bootstrap.native/issues"
-  },
-  "homepage": "https://thednp.github.io/bootstrap.native/",
   "dependencies": {
-    "minifill": "^0.0.17",
-    "event-listener.js": "^0.0.5",
-    "shorter-js": "^0.3.2"
+    "@thednp/event-listener": "^2.0.15",
+    "@thednp/position-observer": "^1.1.3",
+    "@thednp/shorty": "^2.0.14"
   },
   "devDependencies": {
-    "@rollup/plugin-buble": "^0.21.3",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^7.1.0",
-    "@rollup/plugin-typescript": "^8.3.0",
-    "eslint": "^7.22.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "npm-run-all": "^4.1.5",
-    "rollup": "^2.38.5",
-    "rollup-plugin-terser": "^5.3.1",
-    "typescript": "^4.5.2"
+    "@types/node": "^25.5.0",
+    "@vitest/browser": "^4.1.2",
+    "@vitest/browser-playwright": "^4.1.2",
+    "@vitest/coverage-istanbul": "^4.1.2",
+    "@vitest/ui": "^4.1.2",
+    "playwright": "^1.58.2",
+    "tsdown": "^0.21.5",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.3",
+    "vite-plugin-strip-comments": "^0.0.10",
+    "vitest": "^4.1.2"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=8.6.0"
+  },
+  "inlinedDependencies": {
+    "@thednp/event-listener": "2.0.15",
+    "@thednp/position-observer": "1.1.3",
+    "@thednp/shorty": "2.0.14"
   }
 }

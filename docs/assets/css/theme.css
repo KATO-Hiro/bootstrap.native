@@ -1,3 +1,7 @@
+:root {
+  --bs-font-sans-serif: Arial, system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
 /* carousel */
 #myCarousel .carousel-inner > .carousel-item > .item-bg {
     position: absolute;
@@ -42,7 +46,12 @@ svg.carousel-control-next-icon {
   height: auto;
 }
 
+section {
+  margin-bottom: 3rem;
+}
+
 h2 {
+  margin-top: 3rem;
   letter-spacing: -3px;
   font-size: 56px;
   font-weight: bold;
@@ -60,12 +69,7 @@ html {
 }
 
 /* misc */
-.popover .close {line-height: 0.75;}
-.popover .btn-close {position: absolute; right:0.75em}
-[dir="rtl"] .popover .btn-close {
-  left: 0.75em;
-  right: auto;
-}
+.popover .btn-close {line-height: 1;}
 
 /* bg */
 .bg-bootstrap { background-color: #563d7c }
@@ -191,7 +195,7 @@ nav.border-bottom {
 
 .img-tip-modal,
 .svg-tip-modal {
-  position: absolute; top:250px; 
+  position: absolute; top: 170px; 
 }
 .img-tip-modal {right:0}
 .svg-tip-modal {right:90px}

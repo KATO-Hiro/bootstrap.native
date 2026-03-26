@@ -1,6 +1,7 @@
+.nyc_output
 package-lock.json
-.npmignore
-.vscode/
-node_modules/
-experiments/
-demo.html
+node_modules
+experiments
+coverage
+test/__screenshots__
+.pnpm-store

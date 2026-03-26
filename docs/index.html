@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="The faster, lighter and more compact version of the Bootstrap JavaScript components.">
-    <meta name="keywords" content="JavaScript,Native JavaScript,native,Bootstrap,plugins,jQuery">
+    <meta name="keywords" content="JavaScript,Bootstrap,jQuery">
     <meta name="author" content="thednp">
     <link rel="shortcut icon" href="./assets/img/favicon.ico">
     <link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png">
 
-    <title>Native JavaScript for Bootstrap</title>
+    <title>BSN - Native JavaScript for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link id="bsCSS" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link id="bsCSS" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Prism: Code Highlight -->
     <link rel="stylesheet" href="./assets/css/prism-coy.css">
@@ -20,16 +20,16 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="./assets/css/theme.css">
 
-    <!-- <script src="./dist/bootstrap-native.js"></script> -->
+    <!-- <script src="./assets/js/bootstrap-native.js"></script> -->
   </head>
   <body>
     <header class="navbar navbar-expand-md navbar-dark bg-purple position-static">
       <nav class="container-fluid">
         <a data-bs-toggle="tooltip" data-bs-placement="top" title="&lt;b&gt;Native JavaScript for Bootstrap&lt;/b&gt;&lt;br&gt;The sweetest Vanilla JavaScript library for everyone" class="navbar-brand me-auto me-md-2"  href="https://github.com/thednp/bootstrap.native/">
-          <svg class="d-inline-block align-top" width="40" height="32" viewBox="0 0 118 94" xmlns="http://www.w3.org/2000/svg" aria-hiden="true">
+          <svg class="d-inline-block align-top" width="40" height="32" viewBox="0 0 118 94" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path fill="currentColor" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
           </svg>
-          <span class="ms-1 hidden-xs">Native JavaScript for Bootstrap</span>
+          <span class="ms-1 hidden-xs">Bootstrap Native</span>
         </a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -37,13 +37,10 @@
         <div id="main-nav" class="navbar-collapse collapse">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="v4.html">V4</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" onclick="switchDirection.call(this)">RTL</a>
+              <button class="nav-link" onclick="switchDirection.call(this)">RTL</button>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Github</a>
+              <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Github</button>
               <div class="dropdown-menu dropdown-menu-end">
                 <a class="dropdown-item" href="https://github.com/thednp/bootstrap.native/">Fork</a>
                 <a class="dropdown-item" href="https://github.com/thednp/bootstrap.native/wiki">Wiki</a>
@@ -51,7 +48,7 @@
               </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Share</a>
+              <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Share</button>
               <div class="dropdown-menu dropdown-menu-end">
                 <a class="dropdown-item" target="_blank" rel="noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=http://thednp.github.io/bootstrap.native/index.html" title="Share Native JavaScript for Bootstrap on Facebook">Facebook</a>
                 <a class="dropdown-item" target="_blank" href="https://twitter.com/intent/tweet?text=Spread the word about %23BootstrapNative by @dnp_theme and download here http://thednp.github.io/bootstrap.native/index.html" title="Share Bootstrap Native on Twitter">
@@ -76,9 +73,9 @@
             <div class="item-bg bg-warning"></div>
             <div class="container d-flex align-items-end h-100">
               <div class="position-relative text-dark text-left mb-5">
-                <h1>A better way to Bootstrap 5</h1>
-                <p>The lighter and more compact set of JavaScript components for Bootstrap, sourced with modern ES6+ codebase and strong TypeScript definitions.<br>
-                  At about half the size of the original and around <b>12kb gZipped</b>, this library does most of Bootstrap & Popper combined.</p>
+                <h1>Another Bootstrap?</h1>
+                <p>The lighter and more compact set of JavaScript components for Bootstrap, sourced with Typescript codebase.<br>
+                  At half the size of the original and around <b>21kb gZipped</b>, this library does it all.</p>
                 <p>
                   <a class="btn btn-lg btn-primary me-1" href="https://github.com/thednp/bootstrap.native/archive/master.zip">Download</a>
                   <a class="btn btn-lg btn-secondary" href="https://www.npmjs.com/package/bootstrap.native">NPM</a>
@@ -93,7 +90,7 @@
               <div class="position-relative text-dark w-100 mb-5">
                 <h1>New to <span class="text-light">bootstrap.native</span>?</h1>
                 <p>We launched the project back in 2015 with the goal of debunking the "write less do more" 
-                  <a class="text-white" rel="noreferrer" href="http://blog.garstasio.com/you-dont-need-jquery/" target="_blank" role="button"></a>myth</a>, meanwhile the Bootstrap developers
+                  <a class="text-white" rel="noreferrer" href="http://blog.garstasio.com/you-dont-need-jquery/" target="_blank" role="button">myth</a>, meanwhile the Bootstrap developers
                   themselves have decided to drop jQuery, however we decided to keep maintaining the project for its many benefits and the learning experience.</p>
                 <p><a class="btn btn-lg btn-light" rel="noreferrer" href="https://bloggie.io/@kinopyo/bootstrap-native-bootstrap-without-jquery" target="_blank" role="button">Check out this article</a></p>
               </div>
@@ -111,21 +108,21 @@
             </div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+        <button class="carousel-control-prev" data-bs-target="#myCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+        </button>
+        <button class="carousel-control-next" data-bs-target="#myCarousel" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </a>
+        </button>
       </div>
     </div>
 
     <nav class="navbar navbar-light d-flex d-md-none bg-white sticky-top border-bottom">
       <div class="container">
         <span class="navbar-brand me-0 me-md-2" >
-          <svg class="d-inline-block align-top" width="40" height="32" viewBox="0 0 118 94" xmlns="http://www.w3.org/2000/svg" aria-hiden="true" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Native JavaScript for Bootstrap">
+          <svg class="d-inline-block align-top" width="40" height="32" viewBox="0 0 118 94" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Native JavaScript for Bootstrap">
             <path fill="currentColor" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
           </svg>
           Components
@@ -148,13 +145,14 @@
               <li class="nav-item"><a class="nav-link" href="#componentTab">Tab</a></li>
               <li class="nav-item"><a class="nav-link" href="#componentToast">Toast</a></li>
               <li class="nav-item"><a class="nav-link" href="#componentTooltip">Tooltip</a></li>
+              <li class="nav-item"><a class="nav-link" href="#componentBase">Base Component</a></li>
             </ul>
           </div>
         </div>
       </div>
     </nav>
 
-    <div class="container" id="container">
+    <div class="container" id="container"  data-bs-spy="scroll" data-bs-target="#side-nav" data-bs-root-margin="0px 0px -25%">
       <section id="use">
         <h2>Read First</h2>
         <p>Alright, welcome to the demo page! Please make sure to check the <a href="https://github.com/thednp/bootstrap.native/wiki">Wiki pages</a>, 
@@ -163,8 +161,7 @@
           report <a href="https://github.com/thednp/bootstrap.native/issues">any issues</a>.</p>
       </section>
       <div class="row">
-        <div class="col-md-9" data-bs-spy="scroll" data-bs-target="#side-nav">
-
+        <div class="col-md-9">
           <section id="componentAlert">
             <h2>Alert</h2>
             <p>The <b>Alert</b> component covers the specific original events and public methods, but just like the original plugin, does not provide any
@@ -179,7 +176,6 @@
               <h4>instance.dispose()</h4>
               <p>Removes the component from target element. If the alert has been closed, calling this method
                 should produce no effect, since the alert was already removed from the DOM.</p>
-              <div class="table-responsive">
               <h4>Alert.getInstance()</h4>
               <p>A <i>static</i> method that allows you to access an Alert instance associated to a DOM element.</p>
             </section>
@@ -269,7 +265,7 @@ myAlertInit.close();
 // or 
 myAlertInit.dispose();
 </code></pre>
-          
+
             </section>
           
             <section id="alertExamples">
@@ -440,7 +436,7 @@ var myButtonINIT = BSN.Button.getInstance('#myButton');
             <p>The <b>Carousel</b> component covers the original events, as well as a set of essential options and public methods. 
               In addition it also provides a solid DATA API, it adds a <code>paused</code> class to the target element when in
               paused state, and a solid event handling implementation.</p>
-            <p>The component implements a special <a href="https://github.com/thednp/shorter-js/blob/master/src/misc/timer.js">
+            <p>The component implements a <a href="https://github.com/thednp/shorter-js/blob/master/src/misc/timer.js">
               lock mechanism</a> to guard over trigger events making it virtually impossible to break.</p>
             <section id="carouselOptions">
               <h3>Carousel Options</h3>
@@ -573,7 +569,7 @@ var myButtonINIT = BSN.Button.getInstance('#myButton');
               <h3>Carousel DATA API</h3>
               <p>The component covers most of the original implementation in regards to DATA API, except that you can ignore
                 some of the attributes for the controls, but they must have at least their specific class in order to work. 
-                This is a basic template markup followed by a complete attribute breakdown:</p>
+                This is a basic template markup followed by a complete attributes breakdown:</p>
           
 <pre><code class="language-markup">&lt;!-- the Carousel component --&gt;
 &lt;div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-touch="true" data-bs-pause="hover"&gt;
@@ -711,7 +707,6 @@ var mySpecialCarouselInit = BSN.Carousel.getInstance('#mySpecialCarousel');
 mySpecialCarouselInit.cycle();
 </code></pre>
 
-
             </section>
             
             <section id="carouselExamples">
@@ -751,14 +746,14 @@ mySpecialCarouselInit.cycle();
                   </div>
           
                   <!-- Controls -->
-                  <a class="carousel-control-prev" role="button" data-bs-slide="prev">
+                  <button class="carousel-control-prev" role="button" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" role="button" data-bs-slide="next">
+                  </button>
+                  <button class="carousel-control-next" role="button" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -788,7 +783,6 @@ mySpecialCarouselInit.cycle();
 
             </section>
           </section>
-
 
           <section id="componentCollapse">
             <h2>Collapse</h2>
@@ -884,7 +878,8 @@ mySpecialCarouselInit.cycle();
             <section id="collapseDATA">
               <h3>Collapse DATA API</h3>
               <p>In the following markup, the component will initialize the two <code>.btn</code> elements with the
-                <code>data-bs-toggle="collapse"</code> attribute, both refferencing the same collapsible element via specific atttributes.</p>
+                <code>data-bs-toggle="collapse"</code> attribute, both refferencing the same collapsible element via
+                specific <code>HTMLElement</code> attributes.</p>
           
 <pre><code class="language-markup">&lt;!-- toggle collapse via link with HREF reference --&gt;
 &lt;a id="collapseLink" class="btn btn-primary" role="button" aria-expanded="false" aria-controls="collapseExample"
@@ -906,7 +901,7 @@ mySpecialCarouselInit.cycle();
 &lt;/div&gt;
 </code></pre>
           
-              <p>Now if we stack multiple collapsible elements and wrap them into one parent with an ID attribute and some helper
+              <p>Now if we stack multiple collapsible elements and wrap them into one parent with an ID attribute and / or some helper
                 CSS classes, we can easily create an accordion.</p>
           
 <pre><code class="language-markup">&lt;!-- accordion template --&gt;
@@ -1053,12 +1048,12 @@ myCollapseInit.toggle();
 
               <div class="accordion mb-3" id="accordionExample">
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
+                  <h4 class="accordion-header" id="headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                       aria-expanded="false" aria-controls="collapseOne">
                       Accordion Item #1
                     </button>
-                  </h2>
+                  </h4>
                   <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds
@@ -1069,11 +1064,11 @@ myCollapseInit.toggle();
                   </div>
                 </div>
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
+                  <h4 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                       Accordion Item #2
                     </button>
-                  </h2>
+                  </h4>
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate
@@ -1084,12 +1079,12 @@ myCollapseInit.toggle();
                   </div>
                 </div>
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
+                  <h4 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
                     aria-expanded="false" aria-controls="collapseThree">
                       Accordion Item #3
                     </button>
-                  </h2>
+                  </h4>
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate
@@ -1106,17 +1101,17 @@ myCollapseInit.toggle();
             </section>
           </section>
 
-
           <section id="componentDropdown">
             <h2>Dropdown</h2>
             <p>The <b>Dropdown</b> component covers most of the functionality from the original plugin in terms of original events,
               instance methods and options, but also offers some additional functionality without using any third party library.</p>
-            <p>To get on par with the original plugin, our component now sports automatic repositioning without the use of Popper.js.</p>
+            <p>To get on par with the original plugin, our component now features automatic repositioning but without the use of Popper.js,
+              but with <a href="https://github.com/thednp/position-observer">PositionObserver</a> to update the menu's position.</p>
             <p>Here's how it works:</p>
             <ul>
-              <li>when showing the dropdown menu to the user, the component will calculate all possible scenarios and update the 
-                its position so that the it's always displayed fully into the viewport;</li>
-              <li>while the dropdown menu is visible to the user, event listeners will update the position for the dropdown menu,
+              <li>when showing the dropdown menu to the user, the component will calculate all possible positions and update the menu 
+                position so that the it's always displayed fully into the viewport;</li>
+              <li>while the dropdown menu is visible to the user, the observer will trigger the update of dropdown menu position,
                 just like when showing it again to the user.</li>
             </ul>
 
@@ -1162,7 +1157,9 @@ myCollapseInit.toggle();
                       <td><code>offset</code></td>
                       <td><em>number</em></td>
                       <td><em>5</em></td>
-                      <td>Option to set the spacing required for the <code>.dropdown-menu</code> relative to the toggle button.</td>
+                      <td>Option to set the spacing required for the <code>.dropdown-menu</code> relative to the toggle button.
+                        Unlike the original plugin, this unique value is used to distance the menu away from its triggering element
+                        for all vertical and horizontal position variations.</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1170,6 +1167,9 @@ myCollapseInit.toggle();
               <p>The previously featured <code>persist</code> options has been deprecated. The <code>.dropdown-menu</code> can be or
                 contain a <code>&lt;form&gt;</code> element, in which case the component will not dismiss it when the user would click
                 or focus inside, but allow the user to interact with it.</p>
+              <p>Thanks to its built in functionality independent from Popper.js, our Dropdown component does't require the following
+                original plugin options: <code>boundary</code>, <code>reference</code> and <code>popperConfig</code>;
+                the <code>autoClose</code> option is not implemented yet.</p>
             </section>
 
             <section id="dropdownMethods">
@@ -1220,6 +1220,10 @@ myCollapseInit.toggle();
                     <tr>
                       <td><code>hidden.bs.dropdown</code></td>
                       <td>This event is fired when the dropdown has finished being hidden from the user.</td>
+                    </tr>
+                    <tr>
+                      <td><code>updated.bs.dropdown</code></td>
+                      <td>This event is fired after the dropdown menu has updated it's position.</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1335,7 +1339,7 @@ myDropdownInit.dispose();
               <div class="btn-toolbar mb-3">
                 <div class="btn-group dropdown me-2">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownButton4" data-bs-toggle="dropdown"
-                    data-bs-persist="true" aria-haspopup="true" aria-expanded="false">
+                    aria-haspopup="true" aria-expanded="false">
                     <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
                       <path d="M610.97 656.333c0 0 361.421-260.813 321.331-559.309-0.87-6.502-3.021-10.906-5.734-13.722-2.765-2.816-7.014-5.018-13.466-5.888-291.686-41.011-546.509 328.806-546.509 328.806-221.082-26.47-205.005 17.613-305.869 259.891-19.302 46.182 11.981 62.106 46.285 49.101 34.304-12.902 109.978-41.523 109.978-41.523l132.608 135.578c0 0-27.955 77.517-40.602 112.589-12.698 35.123 2.816 67.123 48.026 47.411 236.749-103.219 279.859-86.733 253.952-312.934z m51.66-302.899c-30.618-31.386-30.618-82.125 0-113.51 30.618-31.283 80.23-31.283 110.899 0 30.618 31.283 30.618 82.074 0 113.51-30.669 31.283-80.333 31.283-110.899 0z" fill="currentColor"></path>
                     </svg>
@@ -1348,7 +1352,7 @@ myDropdownInit.dispose();
                     </div>
                     <div class="mb-3">
                       <label for="inputPassword3" class="control-label">Password</label>
-                      <div class=""><input type="password" class="form-control" id="inputPassword3" placeholder="Password"></div>
+                      <div class=""><input type="password" class="form-control" id="inputPassword3" placeholder="Password" autocomplete="off"></div>
                     </div>
                     <div class="mb-3">
                       <div class="">
@@ -1415,7 +1419,6 @@ myDropdownInit.dispose();
             </section>
           </section>          
 
-
           <section id="componentModal">
             <h2>Modal</h2>
             <p>The <b>Modal</b> component comes with small changes to options, events and public methods when compared to 
@@ -1424,6 +1427,9 @@ myDropdownInit.dispose();
               <code>&lt;nav class="navbar fixed-top"&gt;</code> are also adjusted in the same manner to get the smoothest possible
               transition. Like all components of the library, the component grants access to the initialization object even if 
               your modal is automatically initialized via DATA API.</p>
+            <p>While shown to the user, the component makes use of <a href="https://developer.mozilla.org/en-US/docs/Web/API/ResiezObserver">ResizeObserver</a>
+              to trigger the update of these elements and not rely on the obsolete implementation of <code>resize</code>
+              event listeners.</p>
 
             <section id="modalOptions">
               <h3>Modal Options</h3>
@@ -1440,7 +1446,7 @@ myDropdownInit.dispose();
                   <tbody>
                     <tr>
                       <td><code>backdrop</code></td>
-                      <td><em>boolean</em> or the <em>string</em> <code>'static'</code></td>
+                      <td><em>boolean</em> or the <em>string</em> <code>"static"</code></td>
                       <td><em>true</em></td>
                       <td>Includes a modal-backdrop element. Alternatively, specify <code>'static'</code> for a backdrop which
                         doesn't close the modal on click.</td>
@@ -1526,6 +1532,8 @@ myDropdownInit.dispose();
               </div>
               <p>If the modal is opened via JavaScript methods, or by clicking on another element that is not a modal triggering 
                 element, the <code>event.relatedTarget</code> is <em>null</em>.</p>
+              <p>In contrast with the original library, BSN doesn't support the <code>hidePrevented.bs.modal</code> event which
+                would require adding one or more additional event listeners just to trigger this event.</p>
             </section>
 
             <section id="modalDATA">
@@ -1685,11 +1693,6 @@ var myModalInit = BSN.Modal.getInstance(myModal);
                     <div class="modal-body">
                       <h4>Text in a modal</h4>
                       <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-                      <h4>Popover in a modal</h4>
-                      <p>This <button style="margin:-5px 0 0 0" role="button" class="btn btn-secondary popover-test"
-                          data-bs-toggle="popover" data-bs-trigger="click"
-                          data-bs-content="And here's some amazing content. It's very engaging. right?"
-                          data-bs-title="A Title">button</button> should trigger a popover on click.</p>
                       <h4>Tooltips in a modal</h4>
                       <p><a href="#" class="tooltip-test" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#"
                           data-bs-toggle="tooltip" class="tooltip-test" title="Tooltip">that link</a> should have tooltips on hover.
@@ -1709,7 +1712,12 @@ var myModalInit = BSN.Modal.getInstance(myModal);
                         <text direction="ltr" fill="#333" x="25" y="25" font-size="14">SVG</text>
                       </svg>
                       <img class="me-1 img-tip-modal" data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-title="&lt;b&gt;Demo Tooltip for &lt;/b&gt; &lt;span class='badge bg-info'&gt;IMG&lt;/span&gt;&lt;br&gt;Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas." alt="Demo Tooltip for IMG" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODAgNDMiIHdpZHRoPSI4MCIgaGVpZ2h0PSI0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICAgICAgICAgICAgICAgIDxyZWN0IGZpbGw9IndoaXRlIiBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iMSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjUiPjwvcmVjdD4NCiAgICAgICAgICAgICAgICAgIDx0ZXh0IGRpcmVjdGlvbj0ibHRyIiBmaWxsPSIjMzMzIiB4PSIyNSIgeT0iMjUiIGZvbnQtc2l6ZT0iMTQiPklNRzwvdGV4dD4NCiAgICAgICAgICAgICAgICA8L3N2Zz4=" />
-    
+
+                      <h4>Popover in a modal</h4>
+                      <p>This <button style="margin:-5px 0 0 0" class="btn btn-secondary popover-test"
+                          data-bs-toggle="popover" data-bs-trigger="click"
+                          data-bs-content="And here's some amazing content. It's very engaging. right?"
+                          data-bs-title="A Title">button</button> should trigger a popover on click.</p>
                       <h4>Open modal from modal</h4>
                       <p>Click <a data-bs-toggle="modal" href="#anotherModal">here</a> to open another modal.</p>
                       <h4>Dismissing the modal is prevented!</h4>
@@ -1718,6 +1726,17 @@ var myModalInit = BSN.Modal.getInstance(myModal);
                       <h4>Overflowing text to show scroll behavior</h4>
                       <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
                         quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                      <div class="btn-group">
+                        <div class="dropdown">
+                          <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Share</button>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a class="dropdown-item" target="_blank" rel="noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=http://thednp.github.io/bootstrap.native/index.html" title="Share Native JavaScript for Bootstrap on Facebook">Facebook</a>
+                            <a class="dropdown-item" target="_blank" href="https://twitter.com/intent/tweet?text=Spread the word about %23BootstrapNative by @dnp_theme and download here http://thednp.github.io/bootstrap.native/index.html" title="Share Bootstrap Native on Twitter">
+                              Twitter
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
                         laoreet rutrum faucibus dolor auctor.</p>  
                       <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl
@@ -1747,7 +1766,7 @@ var myModalInit = BSN.Modal.getInstance(myModal);
                   </div>
                 </div>
               </div>
-              <div id="anotherModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="anotherModalLabel" aria-hidden="true" data-bs-backdrop="false">
+              <div id="anotherModal" class="modal" role="dialog" aria-labelledby="anotherModalLabel" aria-hidden="true" data-bs-backdrop="false">
                 <div class="modal-dialog modal-dialog-scrollable">
                   <div class="modal-content">
                     <div class="modal-header"> 
@@ -1843,7 +1862,6 @@ var findModalInitJS = BSN.Modal.getInstance(myModal);
             </section>
           </section>
 
-
           <section id="componentOffcanvas">
             <h2>Offcanvas</h2>
             <p>The <b>Offcanvas</b> component is our newest addition and comes packed with options, events and public methods.</p>
@@ -1866,15 +1884,16 @@ var findModalInitJS = BSN.Modal.getInstance(myModal);
                   <tbody>
                     <tr>
                       <td><code>backdrop</code></td>
-                      <td><em>boolean</em></td>
+                      <td><em>boolean</em><br><em>"static"</em></td>
                       <td><em>true</em></td>
-                      <td>Option to add a backdrop on the body when offcanvas element is shown.</td>
+                      <td>Option to add a backdrop on the body when offcanvas element is shown. Alternatively, specify <code>"static"</code>
+                        for a backdrop which doesn't close the offcanvas on click.</td>
                     </tr>
                     <tr>
                       <td><code>keyboard</code></td>
                       <td><em>boolean</em></td>
                       <td><em>true</em></td>
-                      <td>Option to dismiss the current modal via <kbd>Esc</kbd> key.</td>
+                      <td>Option to dismiss the current offcanvas via <kbd>Esc</kbd> key.</td>
                     </tr>
                     <tr>
                       <td><code>scroll</code></td>
@@ -1954,13 +1973,15 @@ var findModalInitJS = BSN.Modal.getInstance(myModal);
                 </table>
               </div>
               <p>Similar to the Modal component, if the offcanvas is opened/closed via JavaScript methods, or is dismissed
-                by clicking on another element outside the offcanvas, the <code>event.relatedTarget</code> is <em>null</em>.</p>
+                by clicking on another element outside the offcanvas, the <code>event.relatedTarget</code> is <em>null</em>.
+                Also the Offcanvas component doesn't support the <code>hidePrevented.bs.offcanvas</code> event for the exact
+                same reason as for the Modal component.</p>
             </section>
             <section id="offcanvasDATA">
               <h3 id="offcanvasDataAPI">Offcanvas DATA API</h3>
               <p>You can initialize <b>Offcanvas</b> without writing any code as long as you have an offcanvas and a trigger button
                 with the <code>data-bs-target</code> attribute or a link with <code>href</code> referencing that offcanvas.
-                The component will initialize all elements with <code>&lt;div class="offcanvas"&gt;</code> found in the DOM.</p>
+                The component will initialize all <code>&lt;div class="offcanvas"&gt;</code> elements found in the DOM.</p>
           
 <pre><code class="language-markup">&lt;!-- provide a trigger button --&gt;
 &lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -2028,7 +2049,7 @@ myOffcanvasInstance.dispose();
               <p>Any element initialized via DATA API or JavaScript, automatically grants access to the component's original events.</p>
           
 <pre><code class="language-javascript">// GET THE EVENT TARGET
-// when we are certain which modal ID to work with
+// when we are certain which offcanvas ID to work with
 var myOffcanvas = document.getElementById('offcanvasID');
 
 // ATTACH listeners
@@ -2042,7 +2063,7 @@ myOffcanvas.addEventListener('show.bs.offcanvas', function(event){
 // shown.bs.offcanvas event
 myOffcanvas.addEventListener('shown.bs.offcanvas', function(event){
   // do something when this event triggers
-  // event.target is the modal referenced in myOffcanvas
+  // event.target is the offcanvas referenced in myOffcanvas
   // event.relatedTarget can be the triggering button or NULL
 }, false);
 
@@ -2110,20 +2131,19 @@ var myOffcanvasInit = BSN.Offcanvas.getInstance(myOffcanvas);
                     <button type="button" class="btn btn-secondary mb-1" data-bs-toggle="popover" data-bs-trigger="click"
                       data-bs-content="Closing this offcanvas will also close this popover.">Popover</button>
                   </div>
-  
                 </div>
               </div>
 
-              <div class="btn-toolbar mb-3">
-                <button class="btn btn-primary me-1 mb-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+              <div class="btn-toolbar gap-1 mb-3">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                   <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
                     <path d="M610.97 656.333c0 0 361.421-260.813 321.331-559.309-0.87-6.502-3.021-10.906-5.734-13.722-2.765-2.816-7.014-5.018-13.466-5.888-291.686-41.011-546.509 328.806-546.509 328.806-221.082-26.47-205.005 17.613-305.869 259.891-19.302 46.182 11.981 62.106 46.285 49.101 34.304-12.902 109.978-41.523 109.978-41.523l132.608 135.578c0 0-27.955 77.517-40.602 112.589-12.698 35.123 2.816 67.123 48.026 47.411 236.749-103.219 279.859-86.733 253.952-312.934z m51.66-302.899c-30.618-31.386-30.618-82.125 0-113.51 30.618-31.283 80.23-31.283 110.899 0 30.618 31.283 30.618 82.074 0 113.51-30.669 31.283-80.333 31.283-110.899 0z" fill="currentColor"></path>
                   </svg>
                   Scroll
                 </button>
-                <button class="btn btn-primary me-1 mb-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNoBackdrop" aria-controls="offcanvasNoBackdrop">No Backdrop</button>
-                <button class="btn btn-primary me-1 mb-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTopWithBackdrop" aria-controls="offcanvasTopWithBackdrop">Backdrop Top</button>
-                <button class="btn btn-primary mb-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Scrolling & backdrop</button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNoBackdrop" aria-controls="offcanvasNoBackdrop">No Backdrop</button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTopWithBackdrop" aria-controls="offcanvasTopWithBackdrop">Backdrop Top</button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Scrolling & backdrop</button>
               </div>
 
               <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
@@ -2133,35 +2153,36 @@ var myOffcanvasInit = BSN.Offcanvas.getInstance(myOffcanvas);
                 </div>
                 <div class="offcanvas-body">
                   <p>Try scrolling the rest of the page to see this option in action.</p>
-                  <div class="btn-toolbar">
-                    <svg viewBox="0 0 80 43" width="80" height="43" xmlns="http://www.w3.org/2000/svg" class="me-1"
+                  <div class="btn-toolbar gap-1">
+                    <svg viewBox="0 0 80 43" width="80" height="43" xmlns="http://www.w3.org/2000/svg" class=""
                       data-bs-toggle="tooltip" data-bs-placement="top"
                       data-bs-title="&lt;b&gt;Demo Tooltip for &lt;/b&gt; &lt;span class='badge bg-success'&gt;SVG&lt;/span&gt;&lt;br&gt;Perhaps adding even more content would make the job more difficult? Nope, same as if this was a very very short tooltip. Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">
                       <rect fill="rgba(0,0,0,0.01)" stroke="#ccc" stroke-width="1" width="100%" height="100%" rx="5"></rect>
                       <text direction="ltr" fill="#333" x="25" y="25" font-size="14">SVG</text>
                     </svg>
-                    <img class="me-1" data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-title="&lt;b&gt;Demo Tooltip for &lt;/b&gt; &lt;span class='badge bg-info'&gt;IMG&lt;/span&gt;&lt;br&gt;Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas." alt="Demo Tooltip for IMG" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODAgNDMiIHdpZHRoPSI4MCIgaGVpZ2h0PSI0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICAgICAgICAgICAgICAgIDxyZWN0IGZpbGw9IndoaXRlIiBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iMSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjUiPjwvcmVjdD4NCiAgICAgICAgICAgICAgICAgIDx0ZXh0IGRpcmVjdGlvbj0ibHRyIiBmaWxsPSIjMzMzIiB4PSIyNSIgeT0iMjUiIGZvbnQtc2l6ZT0iMTQiPklNRzwvdGV4dD4NCiAgICAgICAgICAgICAgICA8L3N2Zz4=" />
+                    <img class="" data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-title="&lt;b&gt;Demo Tooltip for &lt;/b&gt; &lt;span class='badge bg-info'&gt;IMG&lt;/span&gt;&lt;br&gt;Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas." alt="Demo Tooltip for IMG" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODAgNDMiIHdpZHRoPSI4MCIgaGVpZ2h0PSI0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICAgICAgICAgICAgICAgIDxyZWN0IGZpbGw9IndoaXRlIiBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iMSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjUiPjwvcmVjdD4NCiAgICAgICAgICAgICAgICAgIDx0ZXh0IGRpcmVjdGlvbj0ibHRyIiBmaWxsPSIjMzMzIiB4PSIyNSIgeT0iMjUiIGZvbnQtc2l6ZT0iMTQiPklNRzwvdGV4dD4NCiAgICAgICAgICAgICAgICA8L3N2Zz4=" />
                     <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-trigger="click"
                       data-bs-content="Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Popover</button>
                   </div>
                 </div>
               </div>
-              <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTopWithBackdrop" aria-labelledby="offcanvasTopWithBackdropLabel">
+
+              <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTopWithBackdrop" aria-labelledby="offcanvasTopWithBackdropLabel"  data-bs-backdrop="static">
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="offcanvasTopWithBackdropLabel">Offcanvas Top</h5>
                   <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                  <p>.....</p>
-                  <div class="btn-toolbar">
-                    <svg viewBox="0 0 80 43" width="80" height="43" xmlns="http://www.w3.org/2000/svg" class="me-1 mb-1"
+                  <p>This offcanvas instance uses "static" backdrop.</p>
+                  <div class="btn-toolbar gap-1">
+                    <svg viewBox="0 0 80 43" width="80" height="43" xmlns="http://www.w3.org/2000/svg" class=""
                       data-bs-toggle="tooltip" data-bs-placement="top"
                       data-bs-title="&lt;b&gt;Demo Tooltip for &lt;/b&gt; &lt;span class='badge bg-success'&gt;SVG&lt;/span&gt;&lt;br&gt;Perhaps adding even more content would make the job more difficult? Nope, same as if this was a very very short tooltip. Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">
                       <rect fill="rgba(0,0,0,0.01)" stroke="#ccc" stroke-width="1" width="100%" height="100%" rx="5"></rect>
                       <text direction="ltr" fill="#333" x="25" y="25" font-size="14">SVG</text>
                     </svg>
-                    <img class="me-1 mb-1" data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-title="&lt;b&gt;Demo Tooltip for &lt;/b&gt; &lt;span class='badge bg-info'&gt;IMG&lt;/span&gt;&lt;br&gt;Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas." alt="Demo Tooltip for IMG" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODAgNDMiIHdpZHRoPSI4MCIgaGVpZ2h0PSI0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICAgICAgICAgICAgICAgIDxyZWN0IGZpbGw9IndoaXRlIiBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iMSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjUiPjwvcmVjdD4NCiAgICAgICAgICAgICAgICAgIDx0ZXh0IGRpcmVjdGlvbj0ibHRyIiBmaWxsPSIjMzMzIiB4PSIyNSIgeT0iMjUiIGZvbnQtc2l6ZT0iMTQiPklNRzwvdGV4dD4NCiAgICAgICAgICAgICAgICA8L3N2Zz4=" />
-                    <button type="button" class="btn btn-secondary me-1 mb-1" data-bs-toggle="popover" data-bs-trigger="click"
+                    <img class="" data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-title="&lt;b&gt;Demo Tooltip for &lt;/b&gt; &lt;span class='badge bg-info'&gt;IMG&lt;/span&gt;&lt;br&gt;Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas." alt="Demo Tooltip for IMG" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODAgNDMiIHdpZHRoPSI4MCIgaGVpZ2h0PSI0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICAgICAgICAgICAgICAgIDxyZWN0IGZpbGw9IndoaXRlIiBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iMSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjUiPjwvcmVjdD4NCiAgICAgICAgICAgICAgICAgIDx0ZXh0IGRpcmVjdGlvbj0ibHRyIiBmaWxsPSIjMzMzIiB4PSIyNSIgeT0iMjUiIGZvbnQtc2l6ZT0iMTQiPklNRzwvdGV4dD4NCiAgICAgICAgICAgICAgICA8L3N2Zz4=" />
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-trigger="click"
                       data-bs-content="Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Popover</button>
                   </div>
                 </div>
@@ -2174,15 +2195,15 @@ var myOffcanvasInit = BSN.Offcanvas.getInstance(myOffcanvas);
                 <div class="offcanvas-body">
                   <p>Opening a <b>Modal</b> instance will close this <b>Offcanvas</b> instance.</p>
                   <p>This <b>Offcanvas</b> uses <code>data-bs-backdrop="false"</code> intentionally to test the option independently for each instance.</p>
-                  <div class="btn-toolbar">
-                    <a class="btn btn-primary me-1 mb-1" href="#myModal" data-bs-toggle="modal">Open Modal</a>
-                    <svg viewBox="0 0 80 43" width="80" height="43" xmlns="http://www.w3.org/2000/svg" class="me-1"
+                  <div class="btn-toolbar gap-1">
+                    <a class="btn btn-primary" href="#myModal" data-bs-toggle="modal">Open Modal</a>
+                    <svg viewBox="0 0 80 43" width="80" height="43" xmlns="http://www.w3.org/2000/svg" class=""
                       data-bs-toggle="tooltip" data-bs-placement="top"
                       data-bs-title="&lt;b&gt;Demo Tooltip for &lt;/b&gt; &lt;span class='badge bg-success'&gt;SVG&lt;/span&gt;&lt;br&gt;Perhaps adding even more content would make the job more difficult? Nope, same as if this was a very very short tooltip. Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">
                       <rect fill="rgba(0,0,0,0.01)" stroke="#ccc" stroke-width="1" width="100%" height="100%" rx="5"></rect>
                       <text direction="ltr" fill="#333" x="25" y="25" font-size="14">SVG</text>
                     </svg>
-                    <img class="me-1 mb-1" data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-title="&lt;b&gt;Demo Tooltip for &lt;/b&gt; &lt;span class='badge bg-info'&gt;IMG&lt;/span&gt;&lt;br&gt;Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas." alt="Demo Tooltip for IMG" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODAgNDMiIHdpZHRoPSI4MCIgaGVpZ2h0PSI0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICAgICAgICAgICAgICAgIDxyZWN0IGZpbGw9IndoaXRlIiBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iMSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjUiPjwvcmVjdD4NCiAgICAgICAgICAgICAgICAgIDx0ZXh0IGRpcmVjdGlvbj0ibHRyIiBmaWxsPSIjMzMzIiB4PSIyNSIgeT0iMjUiIGZvbnQtc2l6ZT0iMTQiPklNRzwvdGV4dD4NCiAgICAgICAgICAgICAgICA8L3N2Zz4=" />
+                    <img class="" data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-title="&lt;b&gt;Demo Tooltip for &lt;/b&gt; &lt;span class='badge bg-info'&gt;IMG&lt;/span&gt;&lt;br&gt;Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas." alt="Demo Tooltip for IMG" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODAgNDMiIHdpZHRoPSI4MCIgaGVpZ2h0PSI0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICAgICAgICAgICAgICAgIDxyZWN0IGZpbGw9IndoaXRlIiBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iMSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjUiPjwvcmVjdD4NCiAgICAgICAgICAgICAgICAgIDx0ZXh0IGRpcmVjdGlvbj0ibHRyIiBmaWxsPSIjMzMzIiB4PSIyNSIgeT0iMjUiIGZvbnQtc2l6ZT0iMTQiPklNRzwvdGV4dD4NCiAgICAgICAgICAgICAgICA8L3N2Zz4=" />
                     <button type="button" class="btn btn-secondary mb-1" data-bs-toggle="popover" data-bs-trigger="click"
                       data-bs-content="Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Popover</button>
                   </div>
@@ -2211,7 +2232,6 @@ var myOffcanvasInit = BSN.Offcanvas.getInstance(myOffcanvas);
               </div>
             </section>
           </section>
-
           
           <section id="componentPopover">
             <h2>Popover</h2>
@@ -2219,11 +2239,9 @@ var myOffcanvasInit = BSN.Offcanvas.getInstance(myOffcanvas);
               Unlike our previous versions, this component now extends the <b><a href="#tooltipComponent">Tooltip</a></b> component
               since both share the same utilities and functionality except that <b>Popover</b> has a different template and the
               ability to change how events are handled via <a href="#popoverOptions">additional options</a>.</p>
-            <p>A very special case is handled different with <code>&lt;img&gt;</code> or <code>&lt;svg&gt;</code> targets, the popover 
-              will follow the user cursor. The reason for this implementation is that in most cases images extend beyond the viewport 
-              or in other cases the media elements are partly transparent, so the popover will better follow the user's cursor.</p>
             <p>Our implementation can automatically reposition your popovers when showing them to the user, as well as when 
-              a popover is visible and the <code>resize</code> and <code>scroll</code> events produce layout changes in the page.</p>
+              a popover is visible and layout changes, our new <a href="https://github.com/thednp/position-observer">PositionObserver</a>
+              will trigger the update instead of the previously implemented <code>resize</code> and <code>scroll</code> event listeners.</p>
             <p>On that note, Popover makes use of some <a rel="noreferrer" href="https://floating-ui.com/" target="_blank">floating-ui</a> 
               functionality which have been <a href="https://github.com/thednp/bootstrap.native/issues/158">gradually implemented</a> 
               into our component to always provide an accurate popover position.</p>
@@ -2253,27 +2271,23 @@ var myOffcanvasInit = BSN.Offcanvas.getInstance(myOffcanvas);
                     </tr>
                     <tr>
                       <td><code>btnClose</code></td>
-                      <td><em>string</em></td>
+                      <td><em>string</em><br><em>HTMLElement</em></td>
                       <td><em>markup</em> (see description)</td>
                       <td>Option to set a custom close button for dismissible popovers. This option is useful for labelling the button for WAI-ARIA
                         compliant and multi-language applications as well as for using custom icons. The default button markup is:<br>
                         <code>&lt;button class="btn-close" aria-label="Close"&gt;&lt;/button&gt;</code><br>
+                        This option allows you to set an <code>HTMLElement</code> to be cloned and used as the <code>dismiss</code> button.<br>
                         <b>This option is JavaScript API only.</b></td>
-                    </tr>                    
-                    <tr>
-                      <td><code>container</code></td>
-                      <td><em>selector</em> | <em>HTMLElement</em></td>
-                      <td><code>&lt;body&gt;</code></td>
-                      <td>The container where your popovers are appended to. You can set the option via JavaScript or the
-                        <code>data-bs-container="#elementID"</code> attribute.</td>
                     </tr>
                     <tr>
                       <td><code>content</code></td>
-                      <td><em>string</em> | <em>HTMLElement</em></td>
+                      <td><em>string</em><br><em>HTMLElement</em></td>
                       <td></td>
                       <td>Option to set the <b>content</b> of the popover via JavaScript or the <code>data-bs-content="CONTENT"</code> 
                         attribute. You can also specify a DOM node to serve as your popover content. This option is <b>required</b> via
-                        DATA API initialization or JavaScript initialization in order to validate.</td>
+                        DATA API initialization or JavaScript initialization in order to validate.<br>
+                        This option allows you to set an <code>HTMLElement</code> to be cloned and used as the <code>content</code> filler for your Popover.
+                      </td>
                     </tr>
                     <tr>
                       <td><code>customClass</code></td>
@@ -2327,6 +2341,7 @@ var myOffcanvasInit = BSN.Offcanvas.getInstance(myOffcanvas);
                         The contents from the <code>title</code> option or the <code>data-bs-title</code> attribute will fill in the template's 
                         <code>.popover-header</code> element, while the contents of the <code>data-bs-content</code> attribute will fill in 
                         the <code>.popover-body</code> element.<br>
+                        This option allows you to set an <code>HTMLElement</code> to be cloned and used as the <code>template</code> for your Popover.<br>
                         <b>This option is JavaScript API only.</b></td>
                     </tr>
                     <tr>
@@ -2334,7 +2349,9 @@ var myOffcanvasInit = BSN.Offcanvas.getInstance(myOffcanvas);
                       <td><em>string</em> | <em>HTMLElement</em></td>
                       <td></td>
                       <td>Option to set the <b>title</b> of the popover via JavaScript or the <code>data-bs-title="TITLE"</code>
-                        attribute. You can also specify a DOM node to serve as your popover title.</td>
+                        attribute. You can also specify a DOM node to serve as your popover title.<br>
+                        This option allows you to set an <code>HTMLElement</code> to be cloned and used as the <code>title</code> filler for your Popover.<br>
+                      </td>
                     </tr>
                     <tr>
                       <td><code>trigger</code></td>
@@ -2357,16 +2374,8 @@ var myOffcanvasInit = BSN.Offcanvas.getInstance(myOffcanvas);
                   </tbody>
                 </table>
               </div>
-              <p>The <b>Popover</b> component has a built in method to determine the best <code>container</code> option
-                by default, which may also override the developer configured container when its position doesn't meet the
-                layout requirements. Essentially it will find the closest parent that is not wrapped in any other parent with
-                <code>position: relative</code>, if not, the <code>&lt;body&gt;</code> is used. This serves two main purposes:</p>
-              <ul>
-                <li>one - it will eliminate the browser notice of long render times, usually 30-50ms, which is long enough to
-                  produce jank or scroll interruptions;</li>
-                <li>two - it will make sure that no matter the context or configuration, the component delivers the best
-                  possible outcome in showing the popover within the viewport.</li>
-              </ul>
+              <p>The <b>Popover</b> component no longer requires the <code>container</code> option</p>
+
               <p>If a proper <code>template</code> is not specified via JavaScript or the <code>content</code> option is not set
                 in any way, the <b>Popover</b> will not be initialized for that specific element.</p>
               <p>When your popover title and/or content are HTML markup strings, remember to 
@@ -2434,6 +2443,10 @@ var myOffcanvasInit = BSN.Offcanvas.getInstance(myOffcanvas);
                     <tr>
                       <td><code>hidden.bs.popover</code></td>
                       <td>This event is fired when the popover has finished being hidden from the user.</td>
+                    </tr>
+                    <tr>
+                      <td><code>updated.bs.popover</code></td>
+                      <td>This event is fired after the popover has updated it's position.</td>
                     </tr>
                   </tbody>
                 </table>
@@ -2554,13 +2567,12 @@ var popover2 = new BSN.Popover('.popover-via-template', { // where .popover-via-
                 examples can be dismissed on window resize or blur (focus out).</p>
 
               <template id="sample-ce">
-                <link rel="stylesheet" src="./assets/css/custom-elements.css">
-
-                <slot name="button">
+                <link rel="stylesheet" src="./assets/css/custom-elements.css" />
+                <slot name="button"></slot>
               </template>
                 
               <div class="btn-toolbar mb-3">
-                <ce-tip type="popover" class="me-1 mb-1">
+                <ce-tip type="popover" class="me-1 mb-1 d-inline-flex">
                   <link rel="stylesheet" href="./assets/css/custom-elements.css">
                   <button slot="button" aria-label="Popover CustomElement Test" class="btn btn-popover"
                     data-bs-toggle="popover" 
@@ -2582,12 +2594,10 @@ var popover2 = new BSN.Popover('.popover-via-template', { // where .popover-via-
                  Events
                 </button>
                 <div class="position-static d-flex" id="staticContainer1">
-                  <button type="button" class="btn btn-primary me-1 mb-1" data-bs-toggle="popover" data-bs-container="#staticContainer1" 
-                    data-bs-title="Popover in static container" data-bs-content="This popover is added to a position: static container. If the configured container belongs to parent with position: relative, the component will bypass the configuration.">Static</button>
+                  <button type="button" class="btn btn-primary me-1 mb-1" data-bs-toggle="popover" data-bs-title="Popover in static container" data-bs-content="This popover is added to a position: static container. If the configured container belongs to parent with position: relative, the component will bypass the configuration.">Static</button>
                 </div>                
-                <button type="button" class="btn btn-outline-secondary position-absolute d-none" style="top:0; right: 0;" data-bs-toggle="popover" data-bs-placement="top"  data-container="#popoverExamples"
-                  data-bs-title="Popover on absolute position" data-bs-content="This button is rendered in position: absolute and this requires a position: relative container.">Absolute</button>
-                <input style="max-width: 100px; display: inline; vertical-align: bottom;" type="text" value=""  class="form-control popover-via-template me-1 mb-1" placeholder="Focus me" data-bs-toggle="popover">
+                <button type="button" class="btn btn-outline-secondary position-absolute d-none" style="top:0; right: 0;" data-bs-toggle="popover" data-bs-placement="top" data-bs-title="Popover on absolute position" data-bs-content="This button is rendered in position: absolute and this requires a position: relative container.">Absolute</button>
+                <input style="max-width: 100px; display: inline; vertical-align: bottom;" type="text" value="" class="form-control popover-via-template me-1 mb-1" placeholder="Focus me">
                 <button type="button" id="popover-via-click" class="btn btn-warning me-1 mb-1"  data-bs-title="Popover on CLICK" data-bs-content="This popover is added to a position: relative container. Now simply click again to dismiss.">
                   Click
                 </button>
@@ -2612,15 +2622,18 @@ var popover2 = new BSN.Popover('.popover-via-template', { // where .popover-via-
             </section>
           </section>
 
-
           <section id="componentScrollspy">
             <h2>Scrollspy</h2>
-            <p>The <b>ScrollSpy</b> component inherits some of the <a rel="noreferrer"
-                href="https://getbootstrap.com/docs/5.0/components/scrollspy/" target="_blank">layout and other requirements</a> from
-              the original jQuery plugin in some cases, while in other cases a special markup is required. The component offers
-              public methods, the specific original event, and provides rich JavaScript and DATA APIs.</p>
+            <p>The <b>ScrollSpy</b> component inherits most of the <a rel="noreferrer"
+                href="https://getbootstrap.com/docs/5.3/components/scrollspy/" target="_blank">layout and other requirements</a> from
+              the original component. This component offers public methods, the specific original event, and provides rich JavaScript
+              and DATA APIs.</p>
             <p>The component will initialize for each element with <code>data-bs-spy="scroll"</code> attribute, but will not work if
-              the above requirements are not met or the anchors don't reference the containers accordingly.</p>
+              the above requirements are not met or the anchors don't reference the containers accordingly. In addition, the component
+              will handle click to enable smooth scroll for your targets by default without any additional options.</p>
+            <p>This implementation uses the <a href="https://github.com/thednp/position-observer">PositionObserver</a>
+              which is responsible for triggering the update of the menu items instead of the previously inneficient <code>resize</code>
+              and <code>scroll</code> event listeners.</p>
           
             <section id="scrollspyOptions">
               <h3>ScrollSpy Options</h3>
@@ -2630,7 +2643,7 @@ var popover2 = new BSN.Popover('.popover-via-template', { // where .popover-via-
                     <tr>
                       <th>Name</th>
                       <th>Type</th>
-                      <th>Default</th>
+                      <th class="col-2">Default</th>
                       <th>Description</th>
                     </tr>
                   </thead>
@@ -2646,10 +2659,9 @@ var popover2 = new BSN.Popover('.popover-via-template', { // where .popover-via-
                     </tr>
                     <tr>
                       <td><code>offset</code></td>
-                      <td><em>number</em></td>
-                      <td>10</td>
-                      <td>Option to set a number of pixels as offset from top when calculating position of scroll. Can be set via
-                        <code>data-bs-offset="NUMBER"</code> attribute or simply <code>offset</code> via JavaScript invokation.</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>This option has been removed in BSN v5.1.</td>
                     </tr>
                   </tbody>
                 </table>
@@ -2880,7 +2892,7 @@ myScrollSpyInit.dispose();
           
                 <h4 id="second">Carles aesthetic</h4>
                 <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua cupidatat
-                  mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck,
+                  mcsweeney's vero. <a href="#second" data-bs-trigger="click" data-bs-toggle="tooltip" title="Sample tooltip">Cupidatat</a> four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck,
                   mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic exercitation quis
                   gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.</p>
           
@@ -3239,14 +3251,14 @@ myLastTab.addEventListener('show.bs.tab', function(event){
                 </li>
               </ul>
               <div id="myTabContent1" class="tab-content">
-                <div role="tabpanel" class="tab-pane fade active show" id="home1" aria-labelledby="home1-tab">
-                  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+                <div role="tabpanel" class="tab-pane active show" id="home1" aria-labelledby="home1-tab">
+                  <p><b class="text-info">These tabs have no animation</b> Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
                     master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
                   <p>Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson
                     ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher
                     voluptate nisi qui.</p>
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="profile1" aria-labelledby="profile1-tab">
+                <div role="tabpanel" class="tab-pane" id="profile1" aria-labelledby="profile1-tab">
                   <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1
                     labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer
                     twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum
@@ -3256,7 +3268,7 @@ myLastTab.addEventListener('show.bs.tab', function(event){
                     shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher
                     vero sint qui sapiente accusamus tattooed echo park.</p>
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="dropdown3" aria-labelledby="dropdown3-tab">
+                <div role="tabpanel" class="tab-pane" id="dropdown3" aria-labelledby="dropdown3-tab">
                   <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny
                     pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard
                     locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit
@@ -3265,7 +3277,7 @@ myLastTab.addEventListener('show.bs.tab', function(event){
                     Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu
                     synth chambray yr.</p>
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="dropdown4" aria-labelledby="dropdown4-tab">
+                <div role="tabpanel" class="tab-pane" id="dropdown4" aria-labelledby="dropdown4-tab">
                   <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art
                     party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack
                     portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia
@@ -3274,7 +3286,7 @@ myLastTab.addEventListener('show.bs.tab', function(event){
                     keffiyeh echo park vegan.</p>
                 </div>
               </div>
-          
+
             </section>
           </section>
 
@@ -3339,6 +3351,8 @@ myLastTab.addEventListener('show.bs.tab', function(event){
               <h4>instance.dispose()</h4>
               <p>Removes the component from target element without calling any of the 
                 above methods. Also the toast is not removed from the DOM.</p>
+              <h4>instance.isShown <small>getter</small></h4>
+              <p>Checks if the toast is visible to the user and returns <code>boolean</code>.</p>
               <h4>Toast.getInstance()</h4>
               <p>A <i>static</i> method that allows you to access a Toast instance associated to a DOM element.</p>
 
@@ -3384,10 +3398,21 @@ myLastTab.addEventListener('show.bs.tab', function(event){
             <section id="toastDATA">
               <h3>Toast DATA API</h3>
               <p>The component will initialize all elements with proper markup and the specific DATA API attributes found in
-                the DOM. Note that the <code>data-bs-dismiss="toast"</code> attribute is required for the triggering button.</p>
+                the DOM. Similar to <b>Modal</b> or <b>Offcanvas</b> components, <b>Toast</b> can also work with trigger elements
+                as shown in the sample markup below:</p>
           
-<pre><code class="language-markup">&lt;!-- notice the &lt;button&gt; with the data-bs-dismiss="toast" attribute --&gt;
-&lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+<pre><code class="language-markup">&lt;!-- provide a trigger button --&gt;
+&lt;button class="btn btn-primary" data-bs-toggle="toast" data-bs-target="#tastyToast" aria-controls="tastyToast">
+  Button with data-bs-target
+&lt;/button&gt;
+  
+&lt;!-- or an anchor link --&gt;
+&lt;a class="btn btn-primary" data-bs-toggle="toast" href="#tastyToast" role="button" aria-controls="tastyToast"&gt;
+  Link with href
+&lt;/a&gt;
+
+&lt;!-- and the toast itself --&gt;
+&lt;div id="tastyToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   &lt;div class="toast-header">
     &lt;img src="..." class="rounded mr-2" alt="...">
     &lt;strong class="mr-auto">Bootstrap&lt;/strong>
@@ -3399,7 +3424,9 @@ myLastTab.addEventListener('show.bs.tab', function(event){
   &lt;/div>
 &lt;/div>
 </code></pre>
-
+            <p>Note that the <code>data-bs-dismiss="toast"</code> attribute is required for the button which dismisses the toast
+              as well as the <code>data-bs-toggle="toast"</code> and <code>data-bs-target="#toastID"</code> attributes are
+              required for the trigger elements.</p>
             </section>
 
             <section id="toastJS">
@@ -3408,31 +3435,33 @@ myLastTab.addEventListener('show.bs.tab', function(event){
                 above markup, you can do the following:</p>
           
 <pre><code class="language-javascript">// initialize
-var myTastyToast = new BSN.Toast('#myTastyToast');
+var myTastyToast = new BSN.Toast('#tastyToast');
 </code></pre>
           
               <p>Also attach listeners to the original events:</p>
           
 <pre><code class="language-javascript">// show.bs.toast
-myTastyToast.closest('.toast').addEventListener('show.bs.toast', function(event){
+tastyToast.addEventListener('show.bs.toast', function(event){
   // do something cool
+  // this event can be default prevented
   // event.target is &lt;div class="toast"&gt;
 }, false);
 
 // shown.bs.toast
-myTastyToast.closest('.toast').addEventListener('shown.bs.toast', function(event){
+tastyToast.addEventListener('shown.bs.toast', function(event){
   // do something cool
   // event.target is &lt;div class="toast"&gt;
 }, false);
 
 // hide.bs.toast
-myTastyToast.closest('.toast').addEventListener('hide.bs.toast', function(event){
+tastyToast.addEventListener('hide.bs.toast', function(event){
   // do something cool
+  // this event can be default prevented
   // event.target is &lt;div class="toast"&gt;
 }, false);
 
 // hidden.bs.toast
-myTastyToast.closest('.toast').addEventListener('hidden.bs.toast', function(event){
+tastyToast.addEventListener('hidden.bs.toast', function(event){
   // do something cool
   // event.target is &lt;div class="toast"&gt;
 }, false);
@@ -3458,24 +3487,43 @@ myToastInit.dispose();
           
             <section id="toastExamples">
               <h3>Toast Example</h3>
-              <p>This toast has some listeners attached to all its original events, so check your console.</p>
+
+              <div class="btn-toolbar mb-3">
+                <button class="btn btn-outline-secondary me-1" data-bs-toggle="toast" data-bs-target="#liveToast1">Button Trigger Toast</button>
+                <a href="#liveToast2" class="btn btn-outline-secondary" data-bs-toggle="toast">Anchor Trigger Toast</a>
+              </div>
 
               <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                <div id="liveToast" class="toast fade" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-animation="true">
+                <div id="liveToast1" class="toast fade" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-animation="true">
                   <div class="toast-header">
                     <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
                       <rect fill="#007aff" width="100%" height="100%"></rect>
                     </svg>
-                    <strong class="me-auto">Bootstrap</strong>
+                    <strong class="me-auto">BSN</strong>
                     <small>11 mins ago</small>
                     <button id="myTastyToastBTN" type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                   </div>
                   <div class="toast-body">
-                    Hello, world! This is a toast message.
+                    <b>Hello, world! This is a toast message.</b><br>
+                    <span class="text-info">This toast has some listeners attached to all its original events, so check your console.</span>
+                  </div>
+                </div>
+
+                <div id="liveToast2" class="toast mt-1 fade" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-animation="true">
+                  <div class="toast-header">
+                    <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                      <rect fill="#007aff" width="100%" height="100%"></rect>
+                    </svg>
+                    <strong class="me-auto">BSN</strong>
+                    <small>11 mins ago</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                  <div class="toast-body">
+                    <b>Hello, there! This is another toast message.</b><br>
+                    <span class="text-warning">This toast should showcase the stacking of multiple toasts.</span>
                   </div>
                 </div>
               </div>
-              <p><button class="btn btn-primary" id="showToastBTN">Show Toast</button></p>
 
             </section>
           </section>
@@ -3485,10 +3533,9 @@ myToastInit.dispose();
             <p>Unlike the original plugin, our <b>Tooltip</b> component will initialize right away all elements with the
               <code>data-bs-toggle="tooltip"</code> attribute. Additionally, the component can do automatic placement without any
               options required or third party dependency and covers essential options, methods and original events.</p>
-            <p>Our implementation can automatically reposition your tooltips when shown to the user, as well as when 
-              a tooltip is visible and the <code>resize</code> and <code>scroll</code> events produce layout changes in the page.</p>
-            <p>Just like the <b>Popover</b> component, your tooltips will also follow the user's cursor for <code>&lt;img&gt;</code> 
-              or <code>&lt;svg&gt;</code> targets.</p>              
+            <p>Our implementation can automatically reposition your tooltips when needed thanks to our new
+              <a href="https://github.com/thednp/position-observer">PositionObserver</a> that will trigger the update
+              instead of the previously implemented <code>resize</code> and <code>scroll</code> event listeners.</p>
           
             <section id="tooltipOptions">
               <h3>Tooltip Options</h3>
@@ -3513,13 +3560,6 @@ myToastInit.dispose();
                       <td>Option to enable/disable the tooltip animation. If you disable the animation, you can do that via the
                         <code>data-bs-animation="false"</code> attribute. When enabled, this option will add an additional CSS class <code>'fade'</code>
                         to the tooltip to enable the transition.</td>
-                    </tr>
-                    <tr>
-                      <td><code>container</code></td>
-                      <td><em>selector</em><br>or <em>HTMLElement</em></td>
-                      <td><code>&lt;body&gt;</code></td>
-                      <td>The container where your tooltips get appended to. You can set the option via JavaScript or the
-                        <code>data-bs-container="#elementID"</code> attribute.</td>
                     </tr>
                     <tr>
                       <td><code>customClass</code></td>
@@ -3553,7 +3593,7 @@ myToastInit.dispose();
                     </tr>
                     <tr>
                       <td><code>template</code></td>
-                      <td colspan="2"><em>string</em> | <em>HTMLElement</em><br>(see description)</td>
+                      <td colspan="2"><em>string</em><br><em>HTMLElement</em><br>(see description)</td>
                       <td>Allows you to set a custom template for your tooltips and overrides the default one. 
                         You can also specify a DOM node to serve as your template.
                         The following markup is the default template for tooltips:<br>
@@ -3565,15 +3605,20 @@ myToastInit.dispose();
 </code>
                         
                         The <code>title=""</code> or <code>data-bs-title=""</code> attribute will fill in for the 
-                        <code>.tooltip-inner</code> element.<br><b>This option is JavaScript API only.</b></td>
+                        <code>.tooltip-inner</code> element.<br>
+                        This option allows you to set an <code>HTMLElement</code> to be cloned and used as the <code>template</code> for your Tooltip.<br>
+                        <b>This option is JavaScript API only.</b>
+                      </td>
                     </tr>
                     <tr>
                       <td><code>title</code></td>
-                      <td><em>string</em> | <em>HTMLElement</em></td>
+                      <td><em>string</em><br><em>HTMLElement</em></td>
                       <td>null</td>
                       <td>Allows you to set a custom title to be used for your tooltip; when used via JavaScript
                         API, it will override both the <code>title=""</code> and <code>data-bs-title=""</code> 
-                        attributes. You can also specify an <code>HTMLElement</code> to serve as your tooltip title.</td>
+                        attributes.<br>
+                        This option allows you to set an <code>HTMLElement</code> to be cloned and used as the <code>title</code> filler for your Tooltip.<br>
+                      </td>
                     </tr>
                     <tr>
                       <td><code>trigger</code></td>
@@ -3597,9 +3642,8 @@ myToastInit.dispose();
                   </tbody>
                 </table>
               </div>
-              <p>Now since <b>Popover</b> extends the <b>Tooltip</b> component they share the same built in method to determine the
-                best <code>container</code> option by default, the event lock mechanism and most options or automatic repositioning.</p>
-              <p>When your tooltip title is an HTML markup string, remember to
+              <p>Now since <b>Popover</b> extends the <b>Tooltip</b> component, the <code>container</code> option is now deprecated starting
+                with BSN v5. When your tooltip title is an HTML markup string, remember to
                 <a href="https://www.npmjs.com/package/sanitizer">sanitize the content</a>.</p>
             </section>
           
@@ -3668,6 +3712,10 @@ myToastInit.dispose();
                     <tr>
                       <td><code>hidden.bs.tooltip</code></td>
                       <td>This event is fired when the tooltip has finished being hidden from the user.</td>
+                    </tr>
+                    <tr>
+                      <td><code>updated.bs.tooltip</code></td>
+                      <td>This event is fired after the tooltip has updated it's position.</td>
                     </tr>
                   </tbody>
                 </table>
@@ -3784,22 +3832,22 @@ new BSN.Tooltip('#selector',options).show();
                 <button id="tooltipWithEvents" type="button" class="btn btn-dark me-1 mb-1" data-bs-toggle="tooltip" data-bs-placement="top" 
                   data-bs-title="&lt;b&gt;Tooltip on top&lt;/b&gt;&lt;br&gt;This tooltip example has all events attached">Events</button>
                 <button type="button" class="btn btn-secondary me-1 mb-1" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                  data-bs-title="&lt;b&gt;Tooltip on bottom with &lt;code&gt;focus&lt;/code&gt; event&lt;/b&gt;&lt;br&gt;Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Bottom</button>
+                  data-bs-title="&lt;b&gt;Tooltip on bottom&lt;/b&gt;&lt;br&gt;Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Bottom</button>
                 <button type="button" class="btn btn-success me-1 mb-1" data-bs-toggle="tooltip" data-bs-placement="right" 
                   data-bs-title="&lt;b&gt;Tooltip on right&lt;/b&gt;&lt;br&gt;Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Right</button>
                 <button type="button" class="btn btn-warning me-1 mb-1" data-bs-toggle="tooltip" data-bs-trigger="click"
                   data-bs-title="&lt;b&gt;Tooltip only on click&lt;/b&gt; &lt;span class='badge bg-success'&gt;NEW&lt;/span&gt;&lt;br&gt;Perhaps adding even more content would make the job more difficult? Nope, same as if this was a very very short tooltip. Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">Click</button>
                 <button id="tooltipTemplateExample" type="button" class="btn btn-danger me-1 mb-1" 
                   data-bs-title="&lt;b&gt;Top TEMPLATE&lt;/b&gt; &lt;span class='badge bg-danger'&gt;HOT&lt;/span&gt;&lt;br&gt;This tooltip will be added to a position: relative container. Check out the &lt;code&gt;scripts.js&lt;/code&gt; file for this template example sample code. Perhaps adding even more content would make the job more difficult? Nope, same as if this was a very very short tooltip.">Template</button>
-                <button type="button" class="btn btn-outline-secondary position-absolute me-1 mb-1 d-none" style="top:0; right: 0;" data-bs-toggle="tooltip" data-bs-placement="left"  data-container="#tooltipExamples"
+                <button type="button" class="btn btn-outline-secondary position-absolute me-1 mb-1 d-none" style="top:0; right: 0;" data-bs-toggle="tooltip" data-bs-placement="left" 
                   data-bs-title="Tooltip on absolute position element. This requires a position: relative container.">Absolute</button>
                 <input style="max-width: 100px; display: inline; vertical-align: bottom;" type="text" value="" class="form-control me-1 mb-1" placeholder="Focus me" data-bs-toggle="tooltip" data-bs-title="Tooltip only on focus" data-bs-trigger="focus">
                 <div class="position-static d-flex" id="staticContainer">
-                  <button type="button" class="btn btn-info me-1 mb-1" data-bs-toggle="tooltip" data-bs-container="#staticContainer" 
+                  <button type="button" class="btn btn-info me-1 mb-1" data-bs-toggle="tooltip"
                     data-bs-title="&lt;b&gt;Tooltip in static container&lt;/b&gt;&lt;br&gt;This tooltip is added to a position: static container. If the configured container belongs to parent with position: relative, the component will bypass the configuration.">Static</button>
                 </div>
                 <svg viewBox="0 0 80 43" width="80" height="43" xmlns="http://www.w3.org/2000/svg" class="me-1 mb-1"
-                  data-bs-toggle="tooltip" data-bs-placement="top"
+                  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="click"
                   data-bs-title="&lt;b&gt;Demo Tooltip for &lt;/b&gt; &lt;span class='badge bg-success'&gt;SVG&lt;/span&gt;&lt;br&gt;Perhaps adding even more content would make the job more difficult? Nope, same as if this was a very very short tooltip. Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.">
                   <rect fill="rgba(0,0,0,0.01)" stroke="#ccc" stroke-width="1" width="100%" height="100%" rx="5"></rect>
                   <text direction="ltr" fill="#333" x="25" y="25" font-size="14">SVG</text>
@@ -3818,6 +3866,32 @@ new BSN.Tooltip('#selector',options).show();
                 <img class="position-absolute absolute-img" data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-title="&lt;b&gt;Demo Tooltip for &lt;/b&gt; &lt;span class='badge bg-info'&gt;IMG&lt;/span&gt;&lt;br&gt;Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas." alt="Demo Tooltip for IMG" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODAgNDMiIHdpZHRoPSI4MCIgaGVpZ2h0PSI0MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICAgICAgICAgICAgICAgIDxyZWN0IGZpbGw9IndoaXRlIiBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iMSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjUiPjwvcmVjdD4NCiAgICAgICAgICAgICAgICAgIDx0ZXh0IGRpcmVjdGlvbj0ibHRyIiBmaWxsPSIjMzMzIiB4PSIyNSIgeT0iMjUiIGZvbnQtc2l6ZT0iMTQiPklNRzwvdGV4dD4NCiAgICAgICAgICAgICAgICA8L3N2Zz4=" />
               </div>
 
+              <iframe src="./tooltip-iframe.html" class="border rounded-5 p-3 mb-3" style="border:none; min-height: 225px; width: 100%;">
+              </iframe>
+            </section>
+          </section>
+
+          <section id="componentBase">
+            <h2>BaseComponent</h2>
+            <section id="baseInfo">
+              <h3>Info</h3>
+              <p>Following the development of the original library, we implemented the same solution to remove most repetitive actions common
+                to all components; the <b>BaseComponent</b> provides basic functionality generally focused around determining the specific 
+                <code>HTMLElement</code> target or setting instance options.</p>
+                <p>It also throws an error when no target <code>HTMLElement</code> is found and removes existing instances which is important
+                  to prevent memory overflow or breaking the component functionality.</p>
+            </section>
+            <section id="baseMethods">
+              <h3>Base Properties And Methods</h3>
+              <p>The <b>BaseComponent</b> component exposes some getters for all components to use:</p>
+              <h4>instance.name</h4>
+              <p>Returns the name of the component used to initialize the current instance.</p>
+              <h4>instance.defaults</h4>
+              <p>Returns the component default options values.</p>
+              <h4>instance.version</h4>
+              <p>Returns the library version.</p>
+              <h4>instance.dispose()</h4>
+              <p>Removes the component from target element. Components generally extend this method with additional specific functionality.</p>
             </section>
           </section>
         </div>
@@ -3952,21 +4026,82 @@ new BSN.Tooltip('#selector',options).show();
                 <li class="nav-item"><a rel="nofollow" class="nav-link" href="#tooltipExamples">Examples</a></li>
               </ul>
             </li>
+            <li class="nav-item">
+              <a rel="nofollow" class="nav-link" href="#componentBase">BaseComponent</a>
+              <ul class="nav">
+                <li class="nav-item"><a rel="nofollow" class="nav-link" href="#baseInfo">Info</a></li>
+                <li class="nav-item"><a rel="nofollow" class="nav-link" href="#baseMethods">Methods</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
-
-      <footer class="mt-3 pt-3 border-top">
-        <div class="container">
-          <p class="float-end"><a href="#myCarousel">Back to top</a></p>
-          <p><a href="http://themeforest.net/user/dnp_theme" rel="noreferrer" target="_blank">dnp_theme</a> &copy; 2015-2022.</p>
-        </div>
-      </footer>
     </div>
 
-    <script src="./assets/js/custom-button.js"></script>
-    <script src="./assets/js/bootstrap-native.js"></script>
+    <footer>
+      <div class="container">
+        <div class="row border-top mt-3 pt-5">
+          <div class="col-lg-3 mb-3">
+            <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="https://github.com/thednp/bootstrap.native" aria-label="Bootstrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2 text-success" viewBox="0 0 118 94" role="img">
+                <title>Bootstrap Native</title>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path>
+              </svg>
+              <span class="fs-5">Bootstrap Native</span>
+            </a>
+            <ul class="list-unstyled small">
+              <li class="mb-2">Not affiliated with the original <a class="text-decoration-none" href="https://getbootstrap.com/">Bootstrap</a> and was developed with the help of <a class="text-decoration-none" href="https://github.com/thednp/bootstrap.native/graphs/contributors">our contributors</a>.</li>
+              <li class="mb-2">Code licensed <a class="text-decoration-none" href="https://github.com/thednp/bootstrap.native/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>.</li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+            <h5>Bootstrap Native</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://github.com/thednp/bootstrap.native">Github</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://github.com/thednp/bootstrap.native/issues" target="_blank" rel="noopener">Issues</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://github.com/thednp/bootstrap.native/wiki" target="_blank" rel="noopener">Wiki</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://www.jsdelivr.com/package/npm/bootstrap.native" target="_blank" rel="noopener">CDN</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://stackoverflow.com/questions/tagged/bootstrap-native" target="_blank" rel="noopener">Stack Overflow</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>Links</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://getbootstrap.com/docs/5.3/" target="_blank" rel="noopener">Docs</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://getbootstrap.com/docs/5.3/examples/" target="_blank" rel="noopener">Examples</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://icons.getbootstrap.com/" target="_blank" rel="noopener">Icons</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://blog.getbootstrap.com/" target="_blank" rel="noopener">Blog</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>Guides</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://github.com/twbs/bootstrap/docs/5.3/getting-started/" target="_blank" rel="noopener">Getting started</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://github.com/twbs/bootstrap/docs/5.3/examples/starter-template/" target="_blank" rel="noopener">Starter template</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://github.com/twbs/bootstrap/docs/5.3/getting-started/webpack/" target="_blank" rel="noopener">Webpack</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://github.com/twbs/bootstrap/docs/5.3/getting-started/parcel/" target="_blank" rel="noopener">Parcel</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://github.com/twbs/bootstrap/docs/5.3/getting-started/vite/" target="_blank" rel="noopener">Vite</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>Projects</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">Bootstrap 5</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank" rel="noopener">Bootstrap 4</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://github.com/twbs/icons" target="_blank" rel="noopener">Bootstrap Icons</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://github.com/twbs/rfs" target="_blank" rel="noopener">RFS</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="https://github.com/twbs/examples/" target="_blank" rel="noopener">Examples repo</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="float-end"><a class="text-decoration-none" href="#myCarousel">Back to top</a></p>
+        <p><a class="text-decoration-none fw-bold" href="https://github.com/thednp" rel="noreferrer" target="_blank">thednp</a> &copy; 2015-2026.</p>
+      </div>
+    </footer>
 
+    <script src="./assets/js/custom-button.js"></script>
+    <script src="./assets/js/bootstrap-native.min.js"></script>
     <script src="https://cure53.de/purify.js"></script>
     <script src="./assets/js/scripts.js"></script>
     <script src="./assets/js/prism.js"></script>
